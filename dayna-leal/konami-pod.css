@@ -1,0 +1,68 @@
+:root {
+    --main-red-color: #7f0000;
+}
+.lockedImage {
+    filter: grayscale(100%) brightness(40%);
+}
+.customButton {
+    background-color: var(--main-red-color);
+    color: white;
+}
+.customMessage {
+    position: absolute;
+    z-index: 1;
+    width: 80%;
+    left: 60px;
+    top: 40%;
+}
+html {
+    display: flex;
+    min-height: 100%;
+    min-height: 100vh;
+}
+body {
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    /*flex: 1;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+.message_container {
+    filter: drop-shadow(0 0 8px var(--main-red-color));
+}
+.message_container .message {
+    background: #000;
+    --aug-border: 2px;
+    --aug-border-bg: var(--main-red-color);
+    width: calc(100% - 20px);
+    max-width: 640px;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    transition: all .5s;
+}
+.message_container .message .title {
+    display: inline-block;
+    padding: .5em 2em;
+    font-weight: bold;
+    letter-spacing: .1em;
+    text-align: center;
+    text-transform: uppercase;
+    --aug-inset: .25em;
+    --aug-inset-bg: #ff0;
+    --aug-br: .75em;
+}
+.message_container .message p {
+    color: #fff;
+    padding: 1em;
+    margin: 0;
+    display: block;
+    line-height: 1.4em;
+    text-align: justify;
+    max-height: 10em;
+}
+.checkbox ~ .message_container > .message {
+    max-height: 0;
+    opacity: 0;
+}

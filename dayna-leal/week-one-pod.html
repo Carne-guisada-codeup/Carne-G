@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--    google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!--    font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+    <link rel="stylesheet" href="konami-pod.css">
+</head>
+<body>
+<div class="container customContainer d-flex flex-column justify-content-center">
+
+    <div class="headerContainer container mt-3 mb-0 d-flex flex-row text-center">
+        <h1 class="text-center">Choose your Player!</h1>
+
+        <!--        <div class="hintAppend">-->
+        <!--            <input class="checkbox" type="checkbox" aria-label="Tick the checkbox to open/close the prompt"/>-->
+
+        <!--        </div>-->
+        <button type="button" class="btn ml-auto customButton">Hint</button>
+    </div>
+
+
+
+    <div class="message_container z-1 customMessage">
+        <div class="message" augmented-ui="exe tl-clip br-clip">
+            <div class="title" augmented-ui="exe tl-clip br-clip">Enter the Konami Code to unlock players</div>
+            <p>The Konami Code is: up, up, down, down, left, right, left, right, b, a, enter.</p>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+
+        <div class="cardsDiv d-flex flex-row justify-content-center flex-wrap">
+            <!--contra guy-->
+            <div class="card text-white bg-dark d-flex flex-column align-items-center m-3" style="width: 12rem;">
+                <div class="align-self-end m-2 openLockIcon"><i class="fas fa-lock-open"></i></div>
+                <img src="images/contra.gif" class="card-img-top m-2" alt="Contra Gif" style="height: 150px; width: 150px">
+                <div class="card-body m-0 p-1">
+                    <h6 class="card-title">Bill</h6>
+                </div>
+
+            </div>
+
+            <div class="card text-white bg-dark d-flex flex-column align-items-center m-3 firstEvent" style="width: 12rem;">
+                <div class="align-self-end m-2"><i class="fas fa-lock"></i></div>
+                <img src="images/sonic.gif" class="card-img-top m-2 lockedImage" alt="Sonic Gif" style="height: 150px; width: 150px">
+                <div class="card-body m-0 p-1">
+                    <h6 class="card-title">Sonic</h6>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark d-flex flex-column align-items-center m-3 secondEvent" style="width: 12rem;">
+                <div class="align-self-end m-2"><i class="fas fa-lock"></i></div>
+                <img src="images/megaman.gif" class="card-img-top lockedImage m-2" alt="Megaman Gif" style="height: 150px; width: 150px">
+                <div class="card-body m-0 p-1">
+                    <h6 class="card-title">Megaman</h6>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark d-flex flex-column align-items-center m-3 thirdEvent" style="width: 12rem;">
+                <div class="align-self-end m-2"><i class="fas fa-lock"></i></div>
+                <img src="images/mario-color.gif" class="card-img-top lockedImage m-2" alt="Mario Gif" style="height: 150px; width: 150px">
+                <div class="card-body m-0 p-1">
+                    <h6 class="card-title">Mario</h6>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark d-flex flex-column align-items-center m-3 fourthEvent" style="width: 12rem;">
+                <div class="align-self-end m-2"><i class="fas fa-lock"></i></div>
+                <img src="images/mudkip.gif" class="card-img-top lockedImage m-2" alt="Mudkip Gif" style="height: 150px; width: 150px">
+                <div class="card-body m-0 p-1">
+                    <h6 class="card-title">Mudkip</h6>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark d-flex flex-column align-items-center m-3 fifthEvent" style="width: 12rem;">
+                <div class="align-self-end m-2"><i class="fas fa-lock"></i></div>
+                <img src="images/naruto.gif" class="card-img-top lockedImage m-2" alt="Naruto Gif" style="height: 150px; width: 150px">
+                <div class="card-body m-0 p-1">
+                    <h6 class="card-title">Naruto</h6>
+                </div>
+            </div>
+
+            <div class="card text-white bg-dark d-flex flex-column align-items-center m-3 sixthEvent" style="width: 12rem;">
+                <div class="align-self-end m-2"><i class="fas fa-lock"></i></div>
+                <img src="images/samus.gif" class="card-img-top lockedImage m-2" alt="Samus Gif" style="height: 150px; width: 150px">
+                <div class="card-body m-0 p-1">
+                    <h6 class="card-title">Samus</h6>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="js/jquery-2.2.4.js"></script>
+<script src="konami-pod.js"></script>
+</body>
+</html>
