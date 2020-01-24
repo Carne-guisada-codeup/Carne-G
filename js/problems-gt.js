@@ -64,3 +64,74 @@ console.log(stepsToConvert("abC"))  //1 // "abC" converted to "abc" in 1 step
 console.log(stepsToConvert("abCBA") ) //2 // "abCBA" converted to "ABCBA" in 2 steps
 console.log(stepsToConvert("aba"))  //0
 console.log(stepsToConvert("abaCCC"))  //3
+
+//4. Write a function that converts an object into an array, where each element represents a key-value pair.
+
+
+function toArray(obj) {
+    var arr = [];
+    for(var i in obj){
+        arr.push([i, obj[i]]);
+    }
+    return arr
+}
+
+
+console.log((toArray({ a: 1, b: 2 }), [["a", 1], ["b", 2]]));
+console.log((toArray({ foo: 33, bar: 45, baz: 67 }), [["foo", 33], ["bar", 45], ["baz", 67]]));
+console.log((toArray({ shrimp: 15, tots: 12 }), [["shrimp", 15], ["tots", 12]]));
+console.log((toArray({}), []));
+
+//5. Create a function that takes in an array (slot machine outcome) and returns true if all elements in the array are identical, and false otherwise. The array will contain 4 elements.
+
+function testJackpot(result) {
+    for (i = 0; i < result.length; i++)
+        if(result[3] == result[i]){
+            return true
+        } else {
+            return false
+        }
+}
+
+
+console.log(testJackpot(['@', '@', '@', '@']), true);
+console.log(testJackpot(['!', '!', '!', '!']), true);
+console.log(testJackpot(['abc', 'abc', 'abc', 'abc']), true);
+console.log(testJackpot(['karaoke', 'karaoke', 'karaoke', 'karaoke']), true);
+console.log(testJackpot(['SS', 'SS', 'SS', 'SS']), true);
+console.log(testJackpot([':(', ':)', ':|', ':|']), false);
+console.log(testJackpot(['&&', '&', '&&&', '&&&&']), false);
+console.log(testJackpot(['hee', 'heh', 'heh', 'heh']), false);
+console.log(testJackpot(['SS', 'SS', 'SS', 'Ss']), false);
+console.log(testJackpot(['SS', 'SS', 'Ss', 'Ss']), false);
+
+//6. Create a function that takes a string, checks if it has the same number of x's and o's and returns either true or false.
+//
+//     Return a boolean value (true or false).
+// The string can contain any character.
+//     When no x and no o are in the string, return true.
+
+function XO(str) {
+    var x = 0;
+    var o = 0;
+
+    str.toLowerCase().split('').forEach(function (imput) {
+        if (imput == 'x') {
+            x++;
+        } else if (imput == 'o') {
+            o++
+        }
+    })
+    return x == o;
+}
+
+console.log(XO("ooxx"), true);
+console.log(XO("xooxx"), false);
+console.log(XO("ooxXm"), true);
+console.log(XO("zpzpzpp"), true);
+console.log(XO("zzoo"), false);
+console.log(XO("Xo"), true);
+console.log(XO("x"), false);
+console.log(XO("o"), false);
+console.log(XO("xxxoo"), false);
+console.log(XO(""), true);
