@@ -11,20 +11,10 @@ $(document).ready(function() {
             $('.customMessage').hide();
         }
     });
-    // $('.checkbox').click(function(){
-    //    $(this).append(`<div class="message" augmented-ui="exe tl-clip br-clip">
-    //             <div class="title" augmented-ui="exe tl-clip br-clip">Enter the Konami Code to unlock players</div>
-    //             <p>The Konami Code is: up, up, down, down, left, right, left, right, b, a, enter.</p>
-    //         </div>`)
-    // });
-
-    // $('[data-toggle=popover]').popover({
-    //     trigger: 'focus'
-    // });
 
     var userInput = "";
     var konami = "3838404037393739666513";
-    // var konami = "ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter"; //use this with event.key instead of .which
+
 
     function reset() {
         userInput = "";
