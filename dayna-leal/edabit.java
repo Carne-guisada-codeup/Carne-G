@@ -30,16 +30,54 @@ public class Challenge {
 //        }
 
 //        //solution 1
-//        return zip.matches("[0-9]{5}");
+        return zip.matches("[0-9]{5}");
 
 //        //solution 2
-//        return Pattern.matches("[0-9][0-9][0-9][0-9][0-9]", zip);
+        return Pattern.matches("[0-9][0-9][0-9][0-9][0-9]", zip);
 //        //solution 3
-//        String regex = "\\d{5}";
-//        if(zip.matches(regex)){
-//            return true;
-//        }
-//        return false;
-//        }
+        String regex = "\\d{5}";
+        if(zip.matches(regex)){
+            return true;
+        }
+        return false;
+        }
+
+
+
+        //Get Word Count (Edabit)
+        //Create a method that takes a string and returns the word count. The string will be a sentence.
+        //countWords("Just an example here move along") ➞ 6
+        //countWords("This is a test") ➞ 4
+        //countWords("What an easy task, right") ➞ 5
+        public class Program {
+            public static int countWords(String s) {
+                return s.split(" ").length;
+            }
+        }
+
+        //return a first and last name string with last name first
+        public class Program {
+            public static String nameShuffle(String s) {
+                String[] names = s.split(" ");
+                return names[1] + ", " + names[0];
+            }
+        }
+
+        //count vowels
+        public class Program {
+            public static int countVowels(String str) {
+                int count = 0;
+                for (int i = 0; i < str.length(); i++)
+                    if (isVowel(str.charAt(i)))
+                        ++count;
+                return count;
+            }
+        }
+    static boolean isVowel(char ch)
+    {
+        ch = Character.toUpperCase(ch);
+        return (ch=='A' || ch=='E' || ch=='I' ||
+                ch=='O' || ch=='U');
     }
+
 }
